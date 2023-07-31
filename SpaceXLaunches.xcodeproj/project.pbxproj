@@ -9,23 +9,21 @@
 /* Begin PBXBuildFile section */
 		B56E4CDC2A780964006F5E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CDB2A780964006F5E97 /* AppDelegate.swift */; };
 		B56E4CDE2A780964006F5E97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CDD2A780964006F5E97 /* SceneDelegate.swift */; };
-		B56E4CE02A780964006F5E97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CDF2A780964006F5E97 /* ViewController.swift */; };
-		B56E4CE32A780964006F5E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56E4CE12A780964006F5E97 /* Main.storyboard */; };
 		B56E4CE52A780965006F5E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56E4CE42A780965006F5E97 /* Assets.xcassets */; };
 		B56E4CE82A780965006F5E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56E4CE62A780965006F5E97 /* LaunchScreen.storyboard */; };
 		B56E4CF02A7809F5006F5E97 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B56E4CEF2A7809F4006F5E97 /* README.md */; };
+		B56E4CF82A780D3B006F5E97 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CF72A780D3B006F5E97 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B56E4CD82A780964006F5E97 /* SpaceXLaunches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXLaunches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56E4CDB2A780964006F5E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56E4CDD2A780964006F5E97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B56E4CDF2A780964006F5E97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B56E4CE22A780964006F5E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B56E4CE42A780965006F5E97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B56E4CE72A780965006F5E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56E4CE92A780965006F5E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56E4CEF2A7809F4006F5E97 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B56E4CF72A780D3B006F5E97 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +57,62 @@
 		B56E4CDA2A780964006F5E97 /* SpaceXLaunches */ = {
 			isa = PBXGroup;
 			children = (
-				B56E4CDB2A780964006F5E97 /* AppDelegate.swift */,
-				B56E4CDD2A780964006F5E97 /* SceneDelegate.swift */,
-				B56E4CDF2A780964006F5E97 /* ViewController.swift */,
-				B56E4CE12A780964006F5E97 /* Main.storyboard */,
+				B56E4CF12A780C48006F5E97 /* App */,
+				B56E4CF52A780CC5006F5E97 /* Network */,
+				B56E4CF32A780CB6006F5E97 /* Models */,
+				B56E4CF22A780CB0006F5E97 /* Views */,
+				B56E4CF42A780CBB006F5E97 /* ViewModels */,
+				B56E4CF62A780CC9006F5E97 /* Components */,
 				B56E4CE42A780965006F5E97 /* Assets.xcassets */,
-				B56E4CE62A780965006F5E97 /* LaunchScreen.storyboard */,
 				B56E4CE92A780965006F5E97 /* Info.plist */,
 			);
 			path = SpaceXLaunches;
+			sourceTree = "<group>";
+		};
+		B56E4CF12A780C48006F5E97 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B56E4CDB2A780964006F5E97 /* AppDelegate.swift */,
+				B56E4CDD2A780964006F5E97 /* SceneDelegate.swift */,
+				B56E4CE62A780965006F5E97 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B56E4CF22A780CB0006F5E97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B56E4CF72A780D3B006F5E97 /* ListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B56E4CF32A780CB6006F5E97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B56E4CF42A780CBB006F5E97 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B56E4CF52A780CC5006F5E97 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B56E4CF62A780CC9006F5E97 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +176,6 @@
 				B56E4CE82A780965006F5E97 /* LaunchScreen.storyboard in Resources */,
 				B56E4CE52A780965006F5E97 /* Assets.xcassets in Resources */,
 				B56E4CF02A7809F5006F5E97 /* README.md in Resources */,
-				B56E4CE32A780964006F5E97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56E4CE02A780964006F5E97 /* ViewController.swift in Sources */,
 				B56E4CDC2A780964006F5E97 /* AppDelegate.swift in Sources */,
+				B56E4CF82A780D3B006F5E97 /* ListViewController.swift in Sources */,
 				B56E4CDE2A780964006F5E97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B56E4CE12A780964006F5E97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B56E4CE22A780964006F5E97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B56E4CE62A780965006F5E97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,9 +332,9 @@
 				INFOPLIST_FILE = SpaceXLaunches/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomassmerda.SpaceXLaunches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,9 +363,9 @@
 				INFOPLIST_FILE = SpaceXLaunches/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +373,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomassmerda.SpaceXLaunches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
