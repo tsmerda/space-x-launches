@@ -13,6 +13,18 @@
 		B56E4CE82A780965006F5E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56E4CE62A780965006F5E97 /* LaunchScreen.storyboard */; };
 		B56E4CF02A7809F5006F5E97 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B56E4CEF2A7809F4006F5E97 /* README.md */; };
 		B56E4CF82A780D3B006F5E97 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CF72A780D3B006F5E97 /* ListViewController.swift */; };
+		B56E4CFC2A78110E006F5E97 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CFB2A78110E006F5E97 /* LaunchesViewModel.swift */; };
+		B56E4CFE2A781181006F5E97 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CFD2A781181006F5E97 /* NetworkManager.swift */; };
+		B56E4D002A78119B006F5E97 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4CFF2A78119B006F5E97 /* Launch.swift */; };
+		B56E4D022A7811E5006F5E97 /* LaunchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D012A7811E5006F5E97 /* LaunchError.swift */; };
+		B56E4D042A78120C006F5E97 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D032A78120C006F5E97 /* Crew.swift */; };
+		B56E4D062A781219006F5E97 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D052A781219006F5E97 /* Fairings.swift */; };
+		B56E4D082A78121F006F5E97 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D072A78121F006F5E97 /* Links.swift */; };
+		B56E4D0A2A781225006F5E97 /* Patch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D092A781225006F5E97 /* Patch.swift */; };
+		B56E4D0C2A78122E006F5E97 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D0B2A78122E006F5E97 /* Reddit.swift */; };
+		B56E4D0E2A781235006F5E97 /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D0D2A781235006F5E97 /* Flickr.swift */; };
+		B56E4D102A78123C006F5E97 /* Failures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D0F2A78123C006F5E97 /* Failures.swift */; };
+		B56E4D122A781241006F5E97 /* Cores.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D112A781241006F5E97 /* Cores.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		B56E4CE92A780965006F5E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56E4CEF2A7809F4006F5E97 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B56E4CF72A780D3B006F5E97 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B56E4CFB2A78110E006F5E97 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
+		B56E4CFD2A781181006F5E97 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B56E4CFF2A78119B006F5E97 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		B56E4D012A7811E5006F5E97 /* LaunchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchError.swift; sourceTree = "<group>"; };
+		B56E4D032A78120C006F5E97 /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		B56E4D052A781219006F5E97 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
+		B56E4D072A78121F006F5E97 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		B56E4D092A781225006F5E97 /* Patch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patch.swift; sourceTree = "<group>"; };
+		B56E4D0B2A78122E006F5E97 /* Reddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
+		B56E4D0D2A781235006F5E97 /* Flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		B56E4D0F2A78123C006F5E97 /* Failures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failures.swift; sourceTree = "<group>"; };
+		B56E4D112A781241006F5E97 /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +114,15 @@
 		B56E4CF32A780CB6006F5E97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B56E4CFF2A78119B006F5E97 /* Launch.swift */,
+				B56E4D032A78120C006F5E97 /* Crew.swift */,
+				B56E4D052A781219006F5E97 /* Fairings.swift */,
+				B56E4D072A78121F006F5E97 /* Links.swift */,
+				B56E4D092A781225006F5E97 /* Patch.swift */,
+				B56E4D0B2A78122E006F5E97 /* Reddit.swift */,
+				B56E4D0D2A781235006F5E97 /* Flickr.swift */,
+				B56E4D0F2A78123C006F5E97 /* Failures.swift */,
+				B56E4D112A781241006F5E97 /* Cores.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +130,7 @@
 		B56E4CF42A780CBB006F5E97 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B56E4CFB2A78110E006F5E97 /* LaunchesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -104,6 +138,8 @@
 		B56E4CF52A780CC5006F5E97 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B56E4CFD2A781181006F5E97 /* NetworkManager.swift */,
+				B56E4D012A7811E5006F5E97 /* LaunchError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -187,8 +223,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B56E4CDC2A780964006F5E97 /* AppDelegate.swift in Sources */,
+				B56E4D0E2A781235006F5E97 /* Flickr.swift in Sources */,
+				B56E4D0A2A781225006F5E97 /* Patch.swift in Sources */,
+				B56E4CFC2A78110E006F5E97 /* LaunchesViewModel.swift in Sources */,
+				B56E4D062A781219006F5E97 /* Fairings.swift in Sources */,
+				B56E4D022A7811E5006F5E97 /* LaunchError.swift in Sources */,
+				B56E4D102A78123C006F5E97 /* Failures.swift in Sources */,
+				B56E4CFE2A781181006F5E97 /* NetworkManager.swift in Sources */,
+				B56E4D082A78121F006F5E97 /* Links.swift in Sources */,
+				B56E4D0C2A78122E006F5E97 /* Reddit.swift in Sources */,
 				B56E4CF82A780D3B006F5E97 /* ListViewController.swift in Sources */,
+				B56E4D002A78119B006F5E97 /* Launch.swift in Sources */,
+				B56E4D042A78120C006F5E97 /* Crew.swift in Sources */,
 				B56E4CDE2A780964006F5E97 /* SceneDelegate.swift in Sources */,
+				B56E4D122A781241006F5E97 /* Cores.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

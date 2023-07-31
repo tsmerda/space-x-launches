@@ -9,6 +9,8 @@ import UIKit
 
 class ListViewController: UIViewController {
     
+    private let vm = LaunchesViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
