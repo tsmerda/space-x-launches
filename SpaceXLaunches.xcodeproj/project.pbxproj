@@ -25,6 +25,9 @@
 		B56E4D0E2A781235006F5E97 /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D0D2A781235006F5E97 /* Flickr.swift */; };
 		B56E4D102A78123C006F5E97 /* Failures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D0F2A78123C006F5E97 /* Failures.swift */; };
 		B56E4D122A781241006F5E97 /* Cores.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D112A781241006F5E97 /* Cores.swift */; };
+		B56E4D142A781F2F006F5E97 /* LaunchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D132A781F2F006F5E97 /* LaunchCollectionViewCell.swift */; };
+		B56E4D172A782000006F5E97 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B56E4D162A782000006F5E97 /* SDWebImage */; };
+		B56E4D192A78202D006F5E97 /* LaunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D182A78202D006F5E97 /* LaunchRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,8 @@
 		B56E4D0D2A781235006F5E97 /* Flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
 		B56E4D0F2A78123C006F5E97 /* Failures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failures.swift; sourceTree = "<group>"; };
 		B56E4D112A781241006F5E97 /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
+		B56E4D132A781F2F006F5E97 /* LaunchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCollectionViewCell.swift; sourceTree = "<group>"; };
+		B56E4D182A78202D006F5E97 /* LaunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56E4D172A782000006F5E97 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +153,8 @@
 		B56E4CF62A780CC9006F5E97 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B56E4D132A781F2F006F5E97 /* LaunchCollectionViewCell.swift */,
+				B56E4D182A78202D006F5E97 /* LaunchRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -167,6 +175,9 @@
 			dependencies = (
 			);
 			name = SpaceXLaunches;
+			packageProductDependencies = (
+				B56E4D162A782000006F5E97 /* SDWebImage */,
+			);
 			productName = SpaceXLaunches;
 			productReference = B56E4CD82A780964006F5E97 /* SpaceXLaunches.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +206,9 @@
 				Base,
 			);
 			mainGroup = B56E4CCF2A780964006F5E97;
+			packageReferences = (
+				B56E4D152A782000006F5E97 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = B56E4CD92A780964006F5E97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +246,9 @@
 				B56E4CFE2A781181006F5E97 /* NetworkManager.swift in Sources */,
 				B56E4D082A78121F006F5E97 /* Links.swift in Sources */,
 				B56E4D0C2A78122E006F5E97 /* Reddit.swift in Sources */,
+				B56E4D192A78202D006F5E97 /* LaunchRowView.swift in Sources */,
 				B56E4CF82A780D3B006F5E97 /* ListViewController.swift in Sources */,
+				B56E4D142A781F2F006F5E97 /* LaunchCollectionViewCell.swift in Sources */,
 				B56E4D002A78119B006F5E97 /* Launch.swift in Sources */,
 				B56E4D042A78120C006F5E97 /* Crew.swift in Sources */,
 				B56E4CDE2A780964006F5E97 /* SceneDelegate.swift in Sources */,
@@ -452,6 +468,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B56E4D152A782000006F5E97 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B56E4D162A782000006F5E97 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B56E4D152A782000006F5E97 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B56E4CD02A780964006F5E97 /* Project object */;
 }
