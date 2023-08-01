@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ListViewController: UIViewController {
     
@@ -117,6 +118,15 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.item = item
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedLaunch = vm.launches[indexPath.item]
+        let swiftUIHostingController = UIHostingController(rootView: LaunchDetailView(launch: selectedLaunch))
+        
+        swiftUIHostingController.navigationItem.title = "Launch Detail"
+        swiftUIHostingController.navigationItem.largeTitleDisplayMode = .never
+        self.navigationController?.pushViewController(swiftUIHostingController, animated: true)
     }
     
 }

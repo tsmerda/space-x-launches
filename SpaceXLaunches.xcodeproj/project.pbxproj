@@ -29,6 +29,8 @@
 		B56E4D172A782000006F5E97 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B56E4D162A782000006F5E97 /* SDWebImage */; };
 		B56E4D192A78202D006F5E97 /* LaunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D182A78202D006F5E97 /* LaunchRowView.swift */; };
 		B56E4D1B2A78F1D0006F5E97 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D1A2A78F1D0006F5E97 /* LoadingView.swift */; };
+		B56E4D1D2A7953ED006F5E97 /* LaunchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D1C2A7953ED006F5E97 /* LaunchDetailView.swift */; };
+		B56E4D1F2A795408006F5E97 /* DetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D1E2A795408006F5E97 /* DetailRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		B56E4D132A781F2F006F5E97 /* LaunchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCollectionViewCell.swift; sourceTree = "<group>"; };
 		B56E4D182A78202D006F5E97 /* LaunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRowView.swift; sourceTree = "<group>"; };
 		B56E4D1A2A78F1D0006F5E97 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B56E4D1C2A7953ED006F5E97 /* LaunchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailView.swift; sourceTree = "<group>"; };
+		B56E4D1E2A795408006F5E97 /* DetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B56E4CF72A780D3B006F5E97 /* ListViewController.swift */,
+				B56E4D1C2A7953ED006F5E97 /* LaunchDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				B56E4D132A781F2F006F5E97 /* LaunchCollectionViewCell.swift */,
 				B56E4D182A78202D006F5E97 /* LaunchRowView.swift */,
 				B56E4D1A2A78F1D0006F5E97 /* LoadingView.swift */,
+				B56E4D1E2A795408006F5E97 /* DetailRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				B56E4D022A7811E5006F5E97 /* LaunchError.swift in Sources */,
 				B56E4D102A78123C006F5E97 /* Failures.swift in Sources */,
 				B56E4CFE2A781181006F5E97 /* NetworkManager.swift in Sources */,
+				B56E4D1F2A795408006F5E97 /* DetailRowView.swift in Sources */,
 				B56E4D082A78121F006F5E97 /* Links.swift in Sources */,
 				B56E4D0C2A78122E006F5E97 /* Reddit.swift in Sources */,
 				B56E4D192A78202D006F5E97 /* LaunchRowView.swift in Sources */,
@@ -255,6 +262,7 @@
 				B56E4D002A78119B006F5E97 /* Launch.swift in Sources */,
 				B56E4D042A78120C006F5E97 /* Crew.swift in Sources */,
 				B56E4CDE2A780964006F5E97 /* SceneDelegate.swift in Sources */,
+				B56E4D1D2A7953ED006F5E97 /* LaunchDetailView.swift in Sources */,
 				B56E4D122A781241006F5E97 /* Cores.swift in Sources */,
 				B56E4D1B2A78F1D0006F5E97 /* LoadingView.swift in Sources */,
 			);
