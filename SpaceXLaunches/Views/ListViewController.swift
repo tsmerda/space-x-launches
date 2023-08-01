@@ -11,6 +11,8 @@ class ListViewController: UIViewController {
     
     private let vm = LaunchesViewModel()
     
+    private let searchController = UISearchController(searchResultsController: nil)
+    
     private lazy var cv: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: UIScreen.main.bounds.width, height: 100)
@@ -32,6 +34,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupSearchController()
         setup()
         
         vm.onLaunchUpdated = { [weak self] in
@@ -39,7 +42,6 @@ class ListViewController: UIViewController {
                 self?.cv.reloadData()
             }
         }
-        
         
         vm.onNetworkStateChanged = { [weak self] in
             self?.updateUIForNetworkState()
@@ -79,6 +81,7 @@ private extension ListViewController {
     func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.title = "Launches"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sort", style: .plain, target: self, action: #selector(handleShowSortOptions))
         
         self.view.backgroundColor = .white
         self.view.addSubview(cv)
@@ -101,18 +104,59 @@ private extension ListViewController {
     
 }
 
-// MARK: - CollectionView functions
+// MARK: - CollectionView handling
 extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vm.allLaunches.count
+        return vm.launches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = vm.allLaunches[indexPath.item]
+        let item = vm.launches[indexPath.item]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LaunchCollectionViewCell", for: indexPath) as! LaunchCollectionViewCell
         cell.item = item
         
         return cell
+    }
+    
+}
+
+// MARK: - Search & sort functions
+extension ListViewController {
+    
+    private func setupSearchController() {
+        self.searchController.searchResultsUpdater = self
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.placeholder = "Search launches"
+        
+        self.navigationItem.searchController = searchController
+        self.definesPresentationContext = false
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    @objc func handleShowSortOptions() {
+        let actionSheet = UIAlertController(title: "Sort Launches", message: "Select an option", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Sort by Date", style: .default, handler: { [weak self] _ in
+            self?.vm.sortLaunches(by: .date) // Sort launches by date
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Sort by Name", style: .default, handler: { [weak self] _ in
+            self?.vm.sortLaunches(by: .name) // Sort launches by name
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: - Search handling
+extension ListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        vm.setInSearchMode(searchController)
+        vm.updateSearchController(searchBarText: searchController.searchBar.text)
     }
 }
