@@ -47,8 +47,8 @@ private extension LaunchCollectionViewCell {
         NSLayoutConstraint.activate([
             vw!.topAnchor.constraint(equalTo: contentView.topAnchor),
             vw!.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            vw!.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            vw!.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
+            vw!.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            vw!.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
     }
 }

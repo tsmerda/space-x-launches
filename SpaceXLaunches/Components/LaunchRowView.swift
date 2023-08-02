@@ -82,13 +82,8 @@ class LaunchRowView: UIView {
     }
     
     private func formatDate(_ dateString: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        
-        if let date = dateFormatter.date(from: dateString) {
-            dateFormatter.dateFormat = "MMMM d, yyyy"
-            dateFormatter.locale = Locale(identifier: "en")
-            return dateFormatter.string(from: date)
+        if let date = DateFormatter.launchDateFormatter.date(from: dateString) {
+            return DateFormatter.displayDateFormatter.string(from: date)
         } else {
             return ""
         }

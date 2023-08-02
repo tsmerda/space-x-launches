@@ -67,17 +67,17 @@ struct LaunchDetailView: View {
                     .font(.system(size: 16))
                     .foregroundColor(.secondary)
                 
-                
             }
             .padding()
         }
     }
     
-    func dateFromString(_ date: String) -> Date {
-        let dateFormatter = ISO8601DateFormatter()
-        dateFormatter.formatOptions = [.withFullDate]
-        let date = dateFormatter.date(from: date) ?? Date.now
-        return date
+    private func dateFromString(_ dateString: String) -> String {
+        if let date = DateFormatter.launchDateFormatter.date(from: dateString) {
+            return DateFormatter.displayDateFormatter.string(from: date)
+        } else {
+            return ""
+        }
     }
 }
 

@@ -31,6 +31,7 @@
 		B56E4D1B2A78F1D0006F5E97 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D1A2A78F1D0006F5E97 /* LoadingView.swift */; };
 		B56E4D1D2A7953ED006F5E97 /* LaunchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D1C2A7953ED006F5E97 /* LaunchDetailView.swift */; };
 		B56E4D1F2A795408006F5E97 /* DetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D1E2A795408006F5E97 /* DetailRowView.swift */; };
+		B56E4D242A7A46FA006F5E97 /* DateFormatter+formats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E4D232A7A46FA006F5E97 /* DateFormatter+formats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		B56E4D1A2A78F1D0006F5E97 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B56E4D1C2A7953ED006F5E97 /* LaunchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailView.swift; sourceTree = "<group>"; };
 		B56E4D1E2A795408006F5E97 /* DetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRowView.swift; sourceTree = "<group>"; };
+		B56E4D232A7A46FA006F5E97 /* DateFormatter+formats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+formats.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				B56E4CF22A780CB0006F5E97 /* Views */,
 				B56E4CF42A780CBB006F5E97 /* ViewModels */,
 				B56E4CF62A780CC9006F5E97 /* Components */,
+				B56E4D202A7A4401006F5E97 /* Extensions */,
 				B56E4CE42A780965006F5E97 /* Assets.xcassets */,
 				B56E4CE92A780965006F5E97 /* Info.plist */,
 			);
@@ -166,6 +169,14 @@
 				B56E4D1E2A795408006F5E97 /* DetailRowView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B56E4D202A7A4401006F5E97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B56E4D232A7A46FA006F5E97 /* DateFormatter+formats.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B56E4CDC2A780964006F5E97 /* AppDelegate.swift in Sources */,
+				B56E4D242A7A46FA006F5E97 /* DateFormatter+formats.swift in Sources */,
 				B56E4D0E2A781235006F5E97 /* Flickr.swift in Sources */,
 				B56E4D0A2A781225006F5E97 /* Patch.swift in Sources */,
 				B56E4CFC2A78110E006F5E97 /* LaunchesViewModel.swift in Sources */,
