@@ -10,11 +10,11 @@ import SwiftUI
 
 class ListViewController: UIViewController {
     
-    private let vm = LaunchesViewModel()
+    private let viewModel = LaunchesViewModel()
     
     private let searchController = UISearchController(searchResultsController: nil)
     
-    private lazy var cv: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: UIScreen.main.bounds.width, height: 100)
         
@@ -36,32 +36,32 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
 
         setupSearchController()
-        setup()
+        setupVC()
         
-        vm.onLaunchUpdated = { [weak self] in
+        viewModel.onLaunchUpdated = { [weak self] in
             DispatchQueue.main.async {
-                self?.cv.reloadData()
+                self?.collectionView.reloadData()
             }
         }
         
-        vm.onNetworkStateChanged = { [weak self] in
+        viewModel.onNetworkStateChanged = { [weak self] in
             self?.updateUIForNetworkState()
         }
     }
     
     func updateUIForNetworkState() {
-        switch vm.networkState {
+        switch viewModel.networkState {
         case .na:
-            cv.isHidden = false
+            collectionView.isHidden = false
             loadingView.stopAnimating()
         case .loading:
-            cv.isHidden = true
+            collectionView.isHidden = true
             loadingView.startAnimating()
         case .success:
-            cv.isHidden = false
+            collectionView.isHidden = false
             loadingView.stopAnimating()
         case .failed(let error):
-            cv.isHidden = true
+            collectionView.isHidden = true
             loadingView.stopAnimating()
             showErrorMessage(error)
         }
@@ -70,7 +70,7 @@ class ListViewController: UIViewController {
     func showErrorMessage(_ error: Error) {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { [weak self] _ in
-            self?.vm.loadData()
+            self?.viewModel.loadData()
         }))
         present(alert, animated: true, completion: nil)
     }
@@ -79,13 +79,13 @@ class ListViewController: UIViewController {
 
 private extension ListViewController {
     
-    func setup() {
+    func setupVC() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.title = "Launches"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sort", style: .plain, target: self, action: #selector(handleShowSortOptions))
         
         self.view.backgroundColor = .white
-        self.view.addSubview(cv)
+        self.view.addSubview(collectionView)
         self.view.addSubview(loadingView)
         
         NSLayoutConstraint.activate([
@@ -94,13 +94,13 @@ private extension ListViewController {
         ])
         
         NSLayoutConstraint.activate([
-            cv.topAnchor.constraint(equalTo: view.topAnchor),
-            cv.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            cv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            cv.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
-        cv.delegate = self
+        collectionView.delegate = self
     }
     
 }
@@ -109,11 +109,11 @@ private extension ListViewController {
 extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vm.launches.count
+        return viewModel.launches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = vm.launches[indexPath.item]
+        let item = viewModel.launches[indexPath.item]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LaunchCollectionViewCell", for: indexPath) as! LaunchCollectionViewCell
         cell.item = item
         
@@ -121,7 +121,7 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedLaunch = vm.launches[indexPath.item]
+        let selectedLaunch = viewModel.launches[indexPath.item]
         let swiftUIHostingController = UIHostingController(rootView: LaunchDetailView(launch: selectedLaunch))
         
         swiftUIHostingController.navigationItem.title = "Launch Detail"
@@ -149,11 +149,11 @@ extension ListViewController {
         let actionSheet = UIAlertController(title: "Sort Launches", message: "Select an option", preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Sort by Date", style: .default, handler: { [weak self] _ in
-            self?.vm.sortLaunches(by: .date) // Sort launches by date
+            self?.viewModel.sortLaunches(by: .date) // Sort launches by date
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Sort by Name", style: .default, handler: { [weak self] _ in
-            self?.vm.sortLaunches(by: .name) // Sort launches by name
+            self?.viewModel.sortLaunches(by: .name) // Sort launches by name
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -166,7 +166,7 @@ extension ListViewController {
 // MARK: - Search handling
 extension ListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        vm.setInSearchMode(searchController)
-        vm.updateSearchController(searchBarText: searchController.searchBar.text)
+        viewModel.setInSearchMode(searchController)
+        viewModel.updateSearchController(searchBarText: searchController.searchBar.text)
     }
 }
