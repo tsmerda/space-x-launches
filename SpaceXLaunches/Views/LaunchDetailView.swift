@@ -83,6 +83,6 @@ struct LaunchDetailView: View {
 
 struct LaunchDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchDetailView(launch: mockLaunch)
+        LaunchDetailView(launch: Launch.example)
     }
 }
